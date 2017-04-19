@@ -39,5 +39,5 @@ for i in 1...3 {
     var cookieInstance = Cookie(type: "Oreo-\(i)", brand: "M&M")
     cookieMonsterInstance.takeCookie(cookieToTake: cookieInstance)
 }
-dump(cookieMonsterInstance.cookies) // check cookes fed to cookieMonster
+
 cookieMonsterInstance.eatCookies()
