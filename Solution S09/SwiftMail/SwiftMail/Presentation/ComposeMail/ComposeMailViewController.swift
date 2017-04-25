@@ -11,8 +11,36 @@ class ComposeMailViewController: UIViewController {
     // TODO 7: Both buttons should validate each editable text and display a warning if applicable. If everything is correctly filled out dismissing the ViewController suffices as a "send"
     
     // MARK: IBActions
+    @IBOutlet weak var toEmail: EmailTextField!
+    @IBOutlet weak var emailSubject: SubjectTextField!
+    
     @IBAction func backButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func sendButtonPressed(_ sender: Any) {
+        
+        guard let emailText = self.toEmail.text else {
+            showWarning()
+            return
+        }
+        
+        guard let subjectText = self.emailSubject.text else {
+            showWarning()
+            return
+        }
+    
+        if(emailText == "" || subjectText == "") {
+            showWarning()
+            return
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func showWarning() {
+        let alert = UIAlertController(title: "Warning", message: "Invalid Input. Email, Subject can't be empty", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }

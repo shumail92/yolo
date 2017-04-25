@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fGd-az-Xqh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fGd-az-Xqh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +20,23 @@
                         <viewControllerLayoutGuide type="top" id="mtg-B5-ccX"/>
                         <viewControllerLayoutGuide type="bottom" id="TBx-qt-UP2"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XpG-Pb-XQI">
+                    <view key="view" contentMode="scaleToFill" id="ifO-lS-qVm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CAw-fl-0bD">
+                                <rect key="frame" x="87" y="233.5" width="200" height="200"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CAw-fl-0bD" firstAttribute="centerY" secondItem="ifO-lS-qVm" secondAttribute="centerY" id="4he-9y-6V6"/>
+                            <constraint firstItem="CAw-fl-0bD" firstAttribute="centerX" secondItem="ifO-lS-qVm" secondAttribute="centerX" id="6Wp-rJ-e8H"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showInboxViewController" id="e08-Ae-yRv"/>
+                        <outlet property="logo" destination="CAw-fl-0bD" id="mni-Ce-84a"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showInboxViewController" id="e08-Ae-yRv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gm9-90-eAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -372,17 +383,82 @@
                                                 <action selector="backButtonPressed:" destination="p7b-lO-m1e" id="OFP-mV-plN"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="icon_send" id="6ph-7r-wNO">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="sendButtonPressed:" destination="p7b-lO-m1e" id="Ieq-kN-0Td"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZt-3o-uLe" customClass="FloatingButton" customModule="SwiftMail" customModuleProvider="target">
+                                <rect key="frame" x="259" y="567" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="2IM-5a-anf"/>
+                                    <constraint firstAttribute="height" constant="70" id="S1n-wh-A7a"/>
+                                </constraints>
+                                <state key="normal" title="Compose"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon_send"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="composeMailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0B-jh-WKo"/>
+                                    <action selector="sendButtonPressed:" destination="p7b-lO-m1e" eventType="touchUpInside" id="xO6-RD-sQc"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eU1-ZQ-Xe0">
+                                <rect key="frame" x="16" y="72" width="343" height="475"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7Zk-Cy-0Gi">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="49"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXf-ft-X0m">
+                                                <rect key="frame" x="0.0" y="28.5" width="23.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plY-EP-6OZ" customClass="EmailTextField" customModule="SwiftMail" customModuleProvider="target">
+                                                <rect key="frame" x="29.5" y="28" width="313.5" height="21"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Subject" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZV-Xj-t5G" customClass="SubjectTextField" customModule="SwiftMail" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49" width="343" height="21"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bko-5F-X35">
+                                        <rect key="frame" x="0.0" y="70" width="343" height="405"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MZt-3o-uLe" firstAttribute="top" secondItem="eU1-ZQ-Xe0" secondAttribute="bottom" constant="20" id="6aX-n0-pGt"/>
+                            <constraint firstItem="eU1-ZQ-Xe0" firstAttribute="trailing" secondItem="Tgx-Wa-nea" secondAttribute="trailingMargin" id="7ej-G0-Ck1"/>
+                            <constraint firstItem="eU1-ZQ-Xe0" firstAttribute="leading" secondItem="Tgx-Wa-nea" secondAttribute="leadingMargin" id="8KX-wt-eEt"/>
                             <constraint firstItem="bnA-h7-Nk5" firstAttribute="top" secondItem="Tgx-Wa-nea" secondAttribute="top" id="8Us-Sq-mz8"/>
-                            <constraint firstItem="bnA-h7-Nk5" firstAttribute="leading" secondItem="Tgx-Wa-nea" secondAttribute="leading" id="Evj-H6-5LZ"/>
-                            <constraint firstAttribute="trailing" secondItem="bnA-h7-Nk5" secondAttribute="trailing" id="Gcn-PJ-8IG"/>
+                            <constraint firstItem="bnA-h7-Nk5" firstAttribute="leading" secondItem="Tgx-Wa-nea" secondAttribute="leading" id="ELu-ch-9HN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MZt-3o-uLe" secondAttribute="trailing" constant="30" id="PMj-Xm-Xgp"/>
+                            <constraint firstItem="eU1-ZQ-Xe0" firstAttribute="top" secondItem="bnA-h7-Nk5" secondAttribute="bottom" constant="8" id="Ya4-C9-P3g"/>
+                            <constraint firstItem="fuB-TA-Nna" firstAttribute="top" secondItem="MZt-3o-uLe" secondAttribute="bottom" constant="30" id="hZV-Ju-4Hz"/>
+                            <constraint firstItem="bnA-h7-Nk5" firstAttribute="width" secondItem="Tgx-Wa-nea" secondAttribute="width" id="rgj-6m-lru"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailSubject" destination="sZV-Xj-t5G" id="ah7-GV-SGH"/>
+                        <outlet property="toEmail" destination="plY-EP-6OZ" id="Cuh-W5-KSd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sl6-M1-Tay" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -394,5 +470,7 @@
         <image name="icon_compose" width="25" height="25"/>
         <image name="icon_forward" width="33" height="33"/>
         <image name="icon_reply" width="33" height="33"/>
+        <image name="icon_send" width="25" height="25"/>
+        <image name="logo" width="200" height="200"/>
     </resources>
 </document>
