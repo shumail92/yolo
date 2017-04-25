@@ -20,17 +20,11 @@ class ComposeMailViewController: UIViewController {
 
     @IBAction func sendButtonPressed(_ sender: Any) {
         
-        guard let emailText = self.toEmail.text else {
+        guard let emailText = self.toEmail.text, emailText != "" else {
             showWarning()
             return
         }
-        
-        guard let subjectText = self.emailSubject.text else {
-            showWarning()
-            return
-        }
-    
-        if(emailText == "" || subjectText == "") {
+        guard let subjectText = self.emailSubject.text, subjectText != "" else {
             showWarning()
             return
         }
