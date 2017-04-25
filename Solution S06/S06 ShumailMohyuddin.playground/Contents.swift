@@ -90,10 +90,17 @@ struct Food{
     }
 }
 
+enum StackErrors: Error {
+    case stackEmptyError
+}
+
 struct Stack<T> {
     private var items = [T]()
     mutating func push(_ item: T) {
         items.append(item)
+    }
+    func isEmpty() -> Bool {
+        return self.items.count == 0
     }
     
     mutating func pop() -> T? {
@@ -117,8 +124,13 @@ class CookieMonster{
         food.push(meal)
     }
     
-    func eatFood(){
+    func eatFood() throws {
         var calories = 0
+        
+        if(food.isEmpty()) {
+            throw StackErrors.stackEmptyError
+        }
+        
         while let foodElem = food.pop() {
             print("Yummy \(foodElem.type.name) of \(foodElem.type.calories) Calories")
             calories = calories + foodElem.type.calories
@@ -132,4 +144,9 @@ myCookieMonster.takeFood(meal: Food(type: Salads.chicken))
 myCookieMonster.takeFood(meal: Food(type: FireHydrant.alpha))
 myCookieMonster.takeFood(meal: Food(type: FireHydrant.beta))
 myCookieMonster.takeFood(meal: Food(type: Cookie.oreo))
-myCookieMonster.eatFood()
+
+do {
+    try myCookieMonster.eatFood()
+} catch StackErrors.stackEmptyError {
+    print("Empty Stack")
+}
