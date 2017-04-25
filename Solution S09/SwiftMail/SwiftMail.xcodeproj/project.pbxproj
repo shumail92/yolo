@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D1ADA871E7EA24F00E08993 /* FloatingButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1ADA861E7EA24F00E08993 /* FloatingButton.xib */; };
+		4D1ADA891E7EA25C00E08993 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ADA881E7EA25C00E08993 /* FloatingButton.swift */; };
+		4D1ADA8C1E7EB10000E08993 /* ComposeMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ADA8B1E7EB10000E08993 /* ComposeMailViewController.swift */; };
+		4D87498A1E89360300BBB329 /* ContentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8749891E89360300BBB329 /* ContentTextView.swift */; };
+		4D87498C1E894A4200BBB329 /* InboxExpandAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87498B1E894A4200BBB329 /* InboxExpandAnimator.swift */; };
+		4D87498E1E894BE700BBB329 /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87498D1E894BE700BBB329 /* UserImageView.swift */; };
+		4DDC40B41E68751D00025AFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC40B31E68751D00025AFE /* AppDelegate.swift */; };
+		4DDC40B91E68751D00025AFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC40B71E68751D00025AFE /* Main.storyboard */; };
+		4DDC40BB1E68751D00025AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC40BA1E68751D00025AFE /* Assets.xcassets */; };
+		4DDC40BE1E68751D00025AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC40BC1E68751D00025AFE /* LaunchScreen.storyboard */; };
+		4DDC40D81E687F6500025AFE /* NibLoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC40D71E687F6500025AFE /* NibLoadingButton.swift */; };
+		4DDC40DD1E68800900025AFE /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC40DC1E68800900025AFE /* InboxViewController.swift */; };
+		4DDC40DF1E68801200025AFE /* ViewMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC40DE1E68801200025AFE /* ViewMailViewController.swift */; };
+		4DDC40E21E6880CD00025AFE /* MailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC40E11E6880CD00025AFE /* MailRepository.swift */; };
+		4DDC40E41E68812A00025AFE /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC40E31E68812A00025AFE /* Injector.swift */; };
+		4DDC40E71E68829800025AFE /* JSONMockMailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC40E61E68829800025AFE /* JSONMockMailRepository.swift */; };
+		4DDC40EA1E6883AC00025AFE /* MailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC40E91E6883AC00025AFE /* MailModel.swift */; };
+		4DDC40ED1E688D2700025AFE /* mails.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC40EC1E688D2700025AFE /* mails.json */; };
+		4DDC40F01E68ABA100025AFE /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC40EF1E68ABA100025AFE /* Date+String.swift */; };
+		4DDC40F41E68B97D00025AFE /* UIColor+SMAddtions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC40F31E68B97D00025AFE /* UIColor+SMAddtions.swift */; };
+		BF9521B51E9A903C00BBC8BD /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9521B41E9A903C00BBC8BD /* LaunchScreenViewController.swift */; };
+		BF9521B91E9ADDEE00BBC8BD /* SubjectTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9521B81E9ADDEE00BBC8BD /* SubjectTextField.swift */; };
+		BF9521BB1E9ADE0E00BBC8BD /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9521BA1E9ADE0E00BBC8BD /* EmailTextField.swift */; };
+		BFF1D6AA1E87D49F00AA0A91 /* InboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1D6A91E87D49F00AA0A91 /* InboxTableViewCell.swift */; };
+		BFF1D6AC1E87D4B800AA0A91 /* HeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1D6AB1E87D4B800AA0A91 /* HeaderLabel.swift */; };
+		BFF1D6AE1E87D4CC00AA0A91 /* SubheaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1D6AD1E87D4CC00AA0A91 /* SubheaderLabel.swift */; };
+		BFF1D6B01E87D4DF00AA0A91 /* ContentLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1D6AF1E87D4DF00AA0A91 /* ContentLabel.swift */; };
+		BFF1D6E01E87DDE400AA0A91 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1D6D61E87DDE400AA0A91 /* Roboto-Bold.ttf */; };
+		BFF1D6E11E87DDE400AA0A91 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1D6D71E87DDE400AA0A91 /* Roboto-BoldItalic.ttf */; };
+		BFF1D6E21E87DDE400AA0A91 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1D6D81E87DDE400AA0A91 /* Roboto-Italic.ttf */; };
+		BFF1D6E31E87DDE400AA0A91 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1D6D91E87DDE400AA0A91 /* Roboto-Light.ttf */; };
+		BFF1D6E41E87DDE400AA0A91 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1D6DA1E87DDE400AA0A91 /* Roboto-LightItalic.ttf */; };
+		BFF1D6E51E87DDE400AA0A91 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1D6DB1E87DDE400AA0A91 /* Roboto-Medium.ttf */; };
+		BFF1D6E61E87DDE400AA0A91 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1D6DC1E87DDE400AA0A91 /* Roboto-MediumItalic.ttf */; };
+		BFF1D6E71E87DDE400AA0A91 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1D6DD1E87DDE400AA0A91 /* Roboto-Regular.ttf */; };
+		BFF1D6E81E87DDE400AA0A91 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1D6DE1E87DDE400AA0A91 /* Roboto-Thin.ttf */; };
+		BFF1D6E91E87DDE400AA0A91 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1D6DF1E87DDE400AA0A91 /* Roboto-ThinItalic.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4D1ADA861E7EA24F00E08993 /* FloatingButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloatingButton.xib; sourceTree = "<group>"; };
+		4D1ADA881E7EA25C00E08993 /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		4D1ADA8B1E7EB10000E08993 /* ComposeMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeMailViewController.swift; sourceTree = "<group>"; };
+		4D8749891E89360300BBB329 /* ContentTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTextView.swift; sourceTree = "<group>"; };
+		4D87498B1E894A4200BBB329 /* InboxExpandAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxExpandAnimator.swift; sourceTree = "<group>"; };
+		4D87498D1E894BE700BBB329 /* UserImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
+		4DDC40B01E68751D00025AFE /* SwiftMail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DDC40B31E68751D00025AFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		4DDC40B81E68751D00025AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DDC40BA1E68751D00025AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		4DDC40BD1E68751D00025AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4DDC40BF1E68751D00025AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		4DDC40D71E687F6500025AFE /* NibLoadingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadingButton.swift; sourceTree = "<group>"; };
+		4DDC40DC1E68800900025AFE /* InboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
+		4DDC40DE1E68801200025AFE /* ViewMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMailViewController.swift; sourceTree = "<group>"; };
+		4DDC40E11E6880CD00025AFE /* MailRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailRepository.swift; sourceTree = "<group>"; };
+		4DDC40E31E68812A00025AFE /* Injector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		4DDC40E61E68829800025AFE /* JSONMockMailRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONMockMailRepository.swift; sourceTree = "<group>"; };
+		4DDC40E91E6883AC00025AFE /* MailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailModel.swift; sourceTree = "<group>"; };
+		4DDC40EC1E688D2700025AFE /* mails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mails.json; sourceTree = "<group>"; };
+		4DDC40EF1E68ABA100025AFE /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		4DDC40F31E68B97D00025AFE /* UIColor+SMAddtions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SMAddtions.swift"; sourceTree = "<group>"; };
+		BF9521B41E9A903C00BBC8BD /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaunchScreenViewController.swift; path = SplashScreen/LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		BF9521B81E9ADDEE00BBC8BD /* SubjectTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubjectTextField.swift; path = TextField/SubjectTextField.swift; sourceTree = "<group>"; };
+		BF9521BA1E9ADE0E00BBC8BD /* EmailTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailTextField.swift; path = TextField/EmailTextField.swift; sourceTree = "<group>"; };
+		BFF1D6A91E87D49F00AA0A91 /* InboxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxTableViewCell.swift; sourceTree = "<group>"; };
+		BFF1D6AB1E87D4B800AA0A91 /* HeaderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderLabel.swift; sourceTree = "<group>"; };
+		BFF1D6AD1E87D4CC00AA0A91 /* SubheaderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubheaderLabel.swift; sourceTree = "<group>"; };
+		BFF1D6AF1E87D4DF00AA0A91 /* ContentLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentLabel.swift; sourceTree = "<group>"; };
+		BFF1D6D61E87DDE400AA0A91 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		BFF1D6D71E87DDE400AA0A91 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		BFF1D6D81E87DDE400AA0A91 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		BFF1D6D91E87DDE400AA0A91 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		BFF1D6DA1E87DDE400AA0A91 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		BFF1D6DB1E87DDE400AA0A91 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		BFF1D6DC1E87DDE400AA0A91 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		BFF1D6DD1E87DDE400AA0A91 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		BFF1D6DE1E87DDE400AA0A91 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		BFF1D6DF1E87DDE400AA0A91 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DDC40AD1E68751D00025AFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D1ADA8A1E7EB0AF00E08993 /* ComposeMail */ = {
+			isa = PBXGroup;
+			children = (
+				4D1ADA8B1E7EB10000E08993 /* ComposeMailViewController.swift */,
+			);
+			path = ComposeMail;
+			sourceTree = "<group>";
+		};
+		4D8749851E8934E400BBB329 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				4D87498D1E894BE700BBB329 /* UserImageView.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		4D8749861E8934FC00BBB329 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1D6AB1E87D4B800AA0A91 /* HeaderLabel.swift */,
+				BFF1D6AD1E87D4CC00AA0A91 /* SubheaderLabel.swift */,
+				BFF1D6AF1E87D4DF00AA0A91 /* ContentLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		4D8749871E89350700BBB329 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40D71E687F6500025AFE /* NibLoadingButton.swift */,
+				4D1ADA861E7EA24F00E08993 /* FloatingButton.xib */,
+				4D1ADA881E7EA25C00E08993 /* FloatingButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		4D8749881E89352B00BBB329 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				4D8749891E89360300BBB329 /* ContentTextView.swift */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		4DDC40A71E68751D00025AFE = {
+			isa = PBXGroup;
+			children = (
+				4DDC40B21E68751D00025AFE /* SwiftMail */,
+				4DDC40B11E68751D00025AFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4DDC40B11E68751D00025AFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40B01E68751D00025AFE /* SwiftMail.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DDC40B21E68751D00025AFE /* SwiftMail */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40C51E68754200025AFE /* Presentation */,
+				4DDC40C61E68754D00025AFE /* Domain */,
+				4DDC40C71E68755500025AFE /* Data */,
+				4DDC40CC1E687C0B00025AFE /* Common */,
+			);
+			path = SwiftMail;
+			sourceTree = "<group>";
+		};
+		4DDC40C51E68754200025AFE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1D6B11E87DCE900AA0A91 /* Resources */,
+				4DDC40CE1E687D0300025AFE /* Common */,
+				4DDC40B71E68751D00025AFE /* Main.storyboard */,
+				4DDC40BC1E68751D00025AFE /* LaunchScreen.storyboard */,
+				BF9521B61E9A904F00BBC8BD /* SplashScreen */,
+				4DDC40D91E687F9900025AFE /* Inbox */,
+				4DDC40DA1E687FA500025AFE /* ViewMail */,
+				4D1ADA8A1E7EB0AF00E08993 /* ComposeMail */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4DDC40C61E68754D00025AFE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40E81E68836600025AFE /* Model */,
+				4DDC40E01E68802300025AFE /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4DDC40C71E68755500025AFE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40EB1E688D0100025AFE /* JSON */,
+				4DDC40E51E68823700025AFE /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4DDC40CC1E687C0B00025AFE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40EE1E68AB7B00025AFE /* Extensions */,
+				4DDC40CD1E687C3E00025AFE /* Injection */,
+				4DDC40B31E68751D00025AFE /* AppDelegate.swift */,
+				4DDC40BA1E68751D00025AFE /* Assets.xcassets */,
+				4DDC40BF1E68751D00025AFE /* Info.plist */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4DDC40CD1E687C3E00025AFE /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40E31E68812A00025AFE /* Injector.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
+		4DDC40CE1E687D0300025AFE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40D01E687D4400025AFE /* Extension */,
+				4DDC40CF1E687D2700025AFE /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4DDC40CF1E687D2700025AFE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF9521B71E9ADCCC00BBC8BD /* TextField */,
+				4D8749881E89352B00BBB329 /* TextView */,
+				4D8749871E89350700BBB329 /* Button */,
+				4D8749861E8934FC00BBB329 /* Label */,
+				4D8749851E8934E400BBB329 /* ImageView */,
+				BFF1D6A91E87D49F00AA0A91 /* InboxTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4DDC40D01E687D4400025AFE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40F31E68B97D00025AFE /* UIColor+SMAddtions.swift */,
+			);
+			name = Extension;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4DDC40D91E687F9900025AFE /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40DC1E68800900025AFE /* InboxViewController.swift */,
+				4D87498B1E894A4200BBB329 /* InboxExpandAnimator.swift */,
+			);
+			path = Inbox;
+			sourceTree = "<group>";
+		};
+		4DDC40DA1E687FA500025AFE /* ViewMail */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40DE1E68801200025AFE /* ViewMailViewController.swift */,
+			);
+			path = ViewMail;
+			sourceTree = "<group>";
+		};
+		4DDC40E01E68802300025AFE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40E11E6880CD00025AFE /* MailRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		4DDC40E51E68823700025AFE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40E61E68829800025AFE /* JSONMockMailRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		4DDC40E81E68836600025AFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40E91E6883AC00025AFE /* MailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4DDC40EB1E688D0100025AFE /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40EC1E688D2700025AFE /* mails.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		4DDC40EE1E68AB7B00025AFE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC40EF1E68ABA100025AFE /* Date+String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BF9521B61E9A904F00BBC8BD /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BF9521B41E9A903C00BBC8BD /* LaunchScreenViewController.swift */,
+			);
+			name = SplashScreen;
+			sourceTree = "<group>";
+		};
+		BF9521B71E9ADCCC00BBC8BD /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				BF9521B81E9ADDEE00BBC8BD /* SubjectTextField.swift */,
+				BF9521BA1E9ADE0E00BBC8BD /* EmailTextField.swift */,
+			);
+			name = TextField;
+			sourceTree = "<group>";
+		};
+		BFF1D6B11E87DCE900AA0A91 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1D6D61E87DDE400AA0A91 /* Roboto-Bold.ttf */,
+				BFF1D6D71E87DDE400AA0A91 /* Roboto-BoldItalic.ttf */,
+				BFF1D6D81E87DDE400AA0A91 /* Roboto-Italic.ttf */,
+				BFF1D6D91E87DDE400AA0A91 /* Roboto-Light.ttf */,
+				BFF1D6DA1E87DDE400AA0A91 /* Roboto-LightItalic.ttf */,
+				BFF1D6DB1E87DDE400AA0A91 /* Roboto-Medium.ttf */,
+				BFF1D6DC1E87DDE400AA0A91 /* Roboto-MediumItalic.ttf */,
+				BFF1D6DD1E87DDE400AA0A91 /* Roboto-Regular.ttf */,
+				BFF1D6DE1E87DDE400AA0A91 /* Roboto-Thin.ttf */,
+				BFF1D6DF1E87DDE400AA0A91 /* Roboto-ThinItalic.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DDC40AF1E68751D00025AFE /* SwiftMail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DDC40C21E68751D00025AFE /* Build configuration list for PBXNativeTarget "SwiftMail" */;
+			buildPhases = (
+				4DDC40AC1E68751D00025AFE /* Sources */,
+				4DDC40AD1E68751D00025AFE /* Frameworks */,
+				4DDC40AE1E68751D00025AFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftMail;
+			productName = SwiftMail;
+			productReference = 4DDC40B01E68751D00025AFE /* SwiftMail.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DDC40A81E68751D00025AFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					4DDC40AF1E68751D00025AFE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = WCM2L8RG39;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4DDC40AB1E68751D00025AFE /* Build configuration list for PBXProject "SwiftMail" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DDC40A71E68751D00025AFE;
+			productRefGroup = 4DDC40B11E68751D00025AFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DDC40AF1E68751D00025AFE /* SwiftMail */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DDC40AE1E68751D00025AFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF1D6E91E87DDE400AA0A91 /* Roboto-ThinItalic.ttf in Resources */,
+				BFF1D6E81E87DDE400AA0A91 /* Roboto-Thin.ttf in Resources */,
+				4DDC40ED1E688D2700025AFE /* mails.json in Resources */,
+				4D1ADA871E7EA24F00E08993 /* FloatingButton.xib in Resources */,
+				BFF1D6E41E87DDE400AA0A91 /* Roboto-LightItalic.ttf in Resources */,
+				BFF1D6E01E87DDE400AA0A91 /* Roboto-Bold.ttf in Resources */,
+				BFF1D6E61E87DDE400AA0A91 /* Roboto-MediumItalic.ttf in Resources */,
+				4DDC40BE1E68751D00025AFE /* LaunchScreen.storyboard in Resources */,
+				4DDC40BB1E68751D00025AFE /* Assets.xcassets in Resources */,
+				BFF1D6E21E87DDE400AA0A91 /* Roboto-Italic.ttf in Resources */,
+				BFF1D6E11E87DDE400AA0A91 /* Roboto-BoldItalic.ttf in Resources */,
+				BFF1D6E51E87DDE400AA0A91 /* Roboto-Medium.ttf in Resources */,
+				BFF1D6E71E87DDE400AA0A91 /* Roboto-Regular.ttf in Resources */,
+				4DDC40B91E68751D00025AFE /* Main.storyboard in Resources */,
+				BFF1D6E31E87DDE400AA0A91 /* Roboto-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DDC40AC1E68751D00025AFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D87498A1E89360300BBB329 /* ContentTextView.swift in Sources */,
+				4DDC40D81E687F6500025AFE /* NibLoadingButton.swift in Sources */,
+				BF9521BB1E9ADE0E00BBC8BD /* EmailTextField.swift in Sources */,
+				4DDC40F41E68B97D00025AFE /* UIColor+SMAddtions.swift in Sources */,
+				4D87498C1E894A4200BBB329 /* InboxExpandAnimator.swift in Sources */,
+				BFF1D6AE1E87D4CC00AA0A91 /* SubheaderLabel.swift in Sources */,
+				4DDC40E41E68812A00025AFE /* Injector.swift in Sources */,
+				4DDC40DD1E68800900025AFE /* InboxViewController.swift in Sources */,
+				BF9521B91E9ADDEE00BBC8BD /* SubjectTextField.swift in Sources */,
+				4DDC40E71E68829800025AFE /* JSONMockMailRepository.swift in Sources */,
+				BFF1D6B01E87D4DF00AA0A91 /* ContentLabel.swift in Sources */,
+				4D1ADA8C1E7EB10000E08993 /* ComposeMailViewController.swift in Sources */,
+				BFF1D6AC1E87D4B800AA0A91 /* HeaderLabel.swift in Sources */,
+				4DDC40DF1E68801200025AFE /* ViewMailViewController.swift in Sources */,
+				BFF1D6AA1E87D49F00AA0A91 /* InboxTableViewCell.swift in Sources */,
+				4DDC40F01E68ABA100025AFE /* Date+String.swift in Sources */,
+				4DDC40E21E6880CD00025AFE /* MailRepository.swift in Sources */,
+				4DDC40EA1E6883AC00025AFE /* MailModel.swift in Sources */,
+				4DDC40B41E68751D00025AFE /* AppDelegate.swift in Sources */,
+				4D1ADA891E7EA25C00E08993 /* FloatingButton.swift in Sources */,
+				BF9521B51E9A903C00BBC8BD /* LaunchScreenViewController.swift in Sources */,
+				4D87498E1E894BE700BBB329 /* UserImageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4DDC40B71E68751D00025AFE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DDC40B81E68751D00025AFE /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4DDC40BC1E68751D00025AFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DDC40BD1E68751D00025AFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DDC40C01E68751D00025AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4DDC40C11E68751D00025AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DDC40C31E68751D00025AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WCM2L8RG39;
+				INFOPLIST_FILE = SwiftMail/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.ss17.SwiftMail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4DDC40C41E68751D00025AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WCM2L8RG39;
+				INFOPLIST_FILE = SwiftMail/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.ss17.SwiftMail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DDC40AB1E68751D00025AFE /* Build configuration list for PBXProject "SwiftMail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DDC40C01E68751D00025AFE /* Debug */,
+				4DDC40C11E68751D00025AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DDC40C21E68751D00025AFE /* Build configuration list for PBXNativeTarget "SwiftMail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DDC40C31E68751D00025AFE /* Debug */,
+				4DDC40C41E68751D00025AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DDC40A81E68751D00025AFE /* Project object */;
+}
