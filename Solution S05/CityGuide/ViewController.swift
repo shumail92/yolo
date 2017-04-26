@@ -79,10 +79,12 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let navVC = segue.destination as? UINavigationController
-        let tableVC = navVC?.viewControllers.first as! EditViewController
-        tableVC.city = cities[currentIndex]
-        tableVC.delegate = self
+        if(segue.identifier == "editCitySegue") {
+            if let navVC = segue.destination as? EditViewController {
+                navVC.city = cities[currentIndex]
+                navVC.delegate = self
+            }
+        }
     }
 }
 

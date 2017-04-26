@@ -11,7 +11,6 @@ import UIKit
 class EditViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
-    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var guideTextView: UITextView!
     @IBOutlet weak var favoriteSwitch: UISwitch!
     weak var delegate: SaveCityDelegate?
@@ -36,14 +35,10 @@ class EditViewController: UIViewController, UITextViewDelegate {
         city.favorite = favoriteSwitch.isOn
         
         if let success = delegate?.didPressSave(cityG: city), success {
-            self.performSegue(withIdentifier: "pressBack", sender: self)
+            _ = navigationController?.popViewController(animated: true)
         }
     }
-    
-    @IBAction func goBack() {
-        self.performSegue(withIdentifier: "pressBack", sender: self)
-    }
-    
+        
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if(text == "\n") {
             view.endEditing(true)
