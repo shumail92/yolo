@@ -140,9 +140,9 @@ class ContactListViewController: UIViewController {
     }
     
     func unfavorite(contact: Contact, index: Int, completion: @escaping () -> Void) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
         DispatchQueue.global(qos: .userInitiated).async {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
             let newContact = ServerContact(imageName: contact.imageName!, firstName: contact.firstName!, lastName: contact.lastName!, phoneNumber: contact.phoneNumber!)
             do {
                 context.delete(contact)
