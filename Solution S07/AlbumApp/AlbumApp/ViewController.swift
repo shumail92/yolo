@@ -14,16 +14,12 @@ class ViewController: UIViewController {
     var currentIndex: Int = 0
     
     fileprivate var albumArray = [Album]()
-    fileprivate var albumTitles = [String]()
-    fileprivate var albumSubTitles = [String]()
-    fileprivate var albumImages = [UIImage!]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         albumTable.dataSource = self
         albumTable.delegate = self
         initializeData()
-        initializeArray()
     }
     
     private let a1 = Album(title: "Frozen", artist: "Shumail", genre: "Trance", year: "2012", coverImageName: "cover1")
@@ -37,18 +33,14 @@ class ViewController: UIViewController {
         albumArray = [a1, a2, a3, a4, a5, a6]
     }
     
-    private func initializeArray() {
-        albumTitles = albumArray.map({$0.title})
-        albumSubTitles = albumArray.map({$0.artist})
-        albumImages = albumArray.map{UIImage(named: $0.coverImageName)!}
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let navVC = segue.destination as? UINavigationController
-//        let tableVC = navVC?.viewControllers.first as! DetailViewController
-        let tableVC = segue.destination as! DetailViewController
-        tableVC.album = albumArray[currentIndex]
-        tableVC.delegate = self
+        if(segue.identifier == "editAlbum" ) {
+            if let tableVC = segue.destination as? DetailViewController {
+                tableVC.album = albumArray[currentIndex]
+                tableVC.delegate = self
+            }
+        }
+
     }
     
     @IBAction func unwindToViewController(_ sender: UIStoryboardSegue) {
@@ -56,7 +48,6 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        initializeArray()
         albumTable?.reloadData()
     }
 }
@@ -69,9 +60,9 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "AlbumCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        cell.textLabel?.text = albumTitles[(indexPath as NSIndexPath).row]
-        cell.detailTextLabel?.text = albumSubTitles[(indexPath as NSIndexPath).row]
-        cell.imageView?.image = albumImages[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = albumArray[indexPath.row].title
+        cell.detailTextLabel?.text = albumArray[indexPath.row].artist
+        cell.imageView?.image = UIImage(named: albumArray[indexPath.row].coverImageName)
         return cell
     }
 }
@@ -86,7 +77,6 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: SaveAlbumDelegate {
     func didPressSave(albumG: Album) -> Bool {
         albumArray[currentIndex] = albumG
-        albumTable?.reloadData()
         return true
     }
 }
