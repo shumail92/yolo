@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dt0-IK-Mo1">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dt0-IK-Mo1">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--CityName-->
@@ -17,61 +22,137 @@
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7fp-Zy-n5k">
-                                <rect key="frame" x="20" y="267" width="374" height="359"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES" address="YES" calendarEvent="YES"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rg6-w3-GQu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="259"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rg6-w3-GQu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="201.66666666666666"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="rg6-w3-GQu" secondAttribute="height" multiplier="16:10" id="xrW-og-X9e"/>
-                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1Y-LA-kE2">
-                                <rect key="frame" x="191" y="634" width="32" height="30"/>
+                                <rect key="frame" x="8" y="634" width="398" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="didPressNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="43j-cc-rSb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yo3-UI-gp5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="259"/>
-                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7fp-Zy-n5k">
+                                <rect key="frame" x="8" y="209.66666666666669" width="398" height="416.33333333333331"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="S1Y-LA-kE2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1yZ-9f-Ixb"/>
-                            <constraint firstItem="7fp-Zy-n5k" firstAttribute="top" secondItem="rg6-w3-GQu" secondAttribute="bottom" constant="8" id="FN9-VE-MvK"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S1Y-LA-kE2" secondAttribute="bottom" constant="8" id="Fym-gx-saO"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7fp-Zy-n5k" secondAttribute="bottom" constant="46" id="Ifb-DK-zBG"/>
-                            <constraint firstAttribute="trailing" secondItem="7fp-Zy-n5k" secondAttribute="trailing" constant="20" id="Jch-KE-6JQ"/>
-                            <constraint firstAttribute="trailing" secondItem="rg6-w3-GQu" secondAttribute="trailing" id="SAt-gX-7Jd"/>
-                            <constraint firstItem="7fp-Zy-n5k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Ztw-zG-cBq"/>
-                            <constraint firstItem="rg6-w3-GQu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aoQ-ER-ffd"/>
-                            <constraint firstItem="rg6-w3-GQu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s7Q-NU-ghP"/>
+                            <constraint firstItem="rg6-w3-GQu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Fs-gN-LYe"/>
+                            <constraint firstItem="S1Y-LA-kE2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="9e9-o8-D6I"/>
+                            <constraint firstAttribute="trailing" secondItem="S1Y-LA-kE2" secondAttribute="trailing" constant="8" id="Hco-ia-hSb"/>
+                            <constraint firstItem="rg6-w3-GQu" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="Hdp-Uv-fZA"/>
+                            <constraint firstItem="S1Y-LA-kE2" firstAttribute="top" secondItem="7fp-Zy-n5k" secondAttribute="bottom" constant="8" id="J6S-fj-OUA"/>
+                            <constraint firstItem="rg6-w3-GQu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Mll-dV-DHR"/>
+                            <constraint firstItem="S1Y-LA-kE2" firstAttribute="top" secondItem="7fp-Zy-n5k" secondAttribute="bottom" constant="8" id="Qmc-Hn-EQa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S1Y-LA-kE2" secondAttribute="bottom" constant="8" id="Tgv-u0-RDF"/>
+                            <constraint firstItem="7fp-Zy-n5k" firstAttribute="top" secondItem="rg6-w3-GQu" secondAttribute="bottom" constant="8" id="VXw-cf-axb"/>
+                            <constraint firstAttribute="trailing" secondItem="S1Y-LA-kE2" secondAttribute="trailing" constant="8" id="WIW-VQ-gQR"/>
+                            <constraint firstAttribute="trailing" secondItem="7fp-Zy-n5k" secondAttribute="trailing" constant="8" id="cbW-hy-cZb"/>
+                            <constraint firstItem="S1Y-LA-kE2" firstAttribute="top" secondItem="7fp-Zy-n5k" secondAttribute="bottom" constant="8" id="cmN-Rv-DfB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S1Y-LA-kE2" secondAttribute="bottom" constant="8" id="dRn-b4-Qbw"/>
+                            <constraint firstItem="7fp-Zy-n5k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="dhV-Qo-MFY"/>
+                            <constraint firstItem="rg6-w3-GQu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eVp-AG-1Wx"/>
+                            <constraint firstItem="S1Y-LA-kE2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="eki-0H-JR5"/>
+                            <constraint firstAttribute="trailing" secondItem="rg6-w3-GQu" secondAttribute="trailing" id="lAv-i3-AdJ"/>
+                            <constraint firstItem="S1Y-LA-kE2" firstAttribute="top" secondItem="7fp-Zy-n5k" secondAttribute="bottom" constant="8" id="mvK-Du-riG"/>
+                            <constraint firstItem="7fp-Zy-n5k" firstAttribute="top" secondItem="rg6-w3-GQu" secondAttribute="bottom" constant="8" id="xz6-fD-W5x"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="CityName" id="bMR-77-knc"/>
+                    <navigationItem key="navigationItem" title="CityName" id="bMR-77-knc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="b74-s8-XVL">
+                            <connections>
+                                <segue destination="tda-gk-we1" kind="presentation" id="0o8-II-NoO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cityImageView" destination="rg6-w3-GQu" id="1pt-bw-gVD"/>
                         <outlet property="cityTextView" destination="7fp-Zy-n5k" id="JRe-fV-ycg"/>
+                        <outlet property="editButton" destination="b74-s8-XVL" id="EgQ-Bq-r94"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1253" y="477"/>
+            <point key="canvasLocation" x="998.55072463768124" y="487.50000000000006"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="zuc-q3-Hkd">
+            <objects>
+                <viewController id="C8p-yw-3VH" customClass="EditViewController" customModule="CityGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CTq-Nf-eTH"/>
+                        <viewControllerLayoutGuide type="bottom" id="nc8-ih-gbY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RWR-n7-xWd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark as favorite city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-Ef-KTN">
+                                <rect key="frame" x="28" y="77" width="154" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KTT-4I-vSc">
+                                <rect key="frame" x="357" y="72" width="51" height="31"/>
+                            </switch>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QHr-7S-Ibi">
+                                <rect key="frame" x="20" y="111" width="374" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QHr-7S-Ibi" firstAttribute="top" secondItem="KTT-4I-vSc" secondAttribute="bottom" constant="8" symbolic="YES" id="5Dk-lV-GaL"/>
+                            <constraint firstItem="nc8-ih-gbY" firstAttribute="top" secondItem="QHr-7S-Ibi" secondAttribute="bottom" constant="8" id="Kue-W0-fhw"/>
+                            <constraint firstItem="KTT-4I-vSc" firstAttribute="top" secondItem="CTq-Nf-eTH" secondAttribute="bottom" constant="8" id="NIt-tf-Ksy"/>
+                            <constraint firstItem="QHr-7S-Ibi" firstAttribute="leading" secondItem="RWR-n7-xWd" secondAttribute="leadingMargin" id="ZkN-H5-EaH"/>
+                            <constraint firstItem="QHr-7S-Ibi" firstAttribute="trailing" secondItem="RWR-n7-xWd" secondAttribute="trailingMargin" id="ZqA-H7-d8K"/>
+                            <constraint firstItem="lfr-Ef-KTN" firstAttribute="leading" secondItem="RWR-n7-xWd" secondAttribute="leadingMargin" constant="8" id="hVv-I3-k0f"/>
+                            <constraint firstItem="lfr-Ef-KTN" firstAttribute="top" secondItem="CTq-Nf-eTH" secondAttribute="bottom" constant="13" id="vuf-yU-qCp"/>
+                            <constraint firstAttribute="trailing" secondItem="KTT-4I-vSc" secondAttribute="trailing" constant="8" id="zzV-rR-Txk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OxC-Tl-Y7D">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="SU6-Mo-2BC">
+                            <connections>
+                                <action selector="goBack" destination="C8p-yw-3VH" id="LPW-ci-4K3"/>
+                                <segue destination="ihw-66-d3q" kind="unwind" identifier="pressBack" unwindAction="unwindToViewController:" id="s2x-n2-Hm2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="1jw-ED-bHp">
+                            <connections>
+                                <action selector="saveCity" destination="C8p-yw-3VH" id="Ph4-32-fev"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="SU6-Mo-2BC" id="BkE-Pg-0Kb"/>
+                        <outlet property="favoriteSwitch" destination="KTT-4I-vSc" id="rQx-rO-BHk"/>
+                        <outlet property="guideTextView" destination="QHr-7S-Ibi" id="VKa-IP-AYw"/>
+                        <outlet property="saveButton" destination="1jw-ED-bHp" id="mAp-tm-gBP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojh-Gq-9qE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ihw-66-d3q" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3373.3695652173915" y="489.85507246376818"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UKk-76-B6u">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenVerticallyCompact="YES" id="dt0-IK-Mo1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Uh-RZ-3zE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -83,7 +164,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQw-Cd-ZAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="477"/>
+            <point key="canvasLocation" x="277" y="490"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="91D-nJ-kNn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tda-gk-we1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jOq-F7-6z6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C8p-yw-3VH" kind="relationship" relationship="rootViewController" id="EKA-LT-Bm2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GRJ-uf-VCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2466.666666666667" y="489.94565217391306"/>
         </scene>
     </scenes>
 </document>

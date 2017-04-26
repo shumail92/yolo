@@ -9,7 +9,7 @@
 struct City {
     let name: String
     let imageName: String
-    let guide: String
+    var guide: String
     var favorite: Bool
     
     var composedName: String {

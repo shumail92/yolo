@@ -9,9 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var cityTextView: UITextView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     
     private let hamburg = City(
         name: "Hamburg",
@@ -54,7 +55,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         cities = [hamburg, munich, cologne, berlin, frankfurt, bremen]
     }
     
@@ -70,10 +70,27 @@ class ViewController: UIViewController {
             cityTextView.scrollRangeToVisible(NSRange(location: 0, length: 0))
         }
     }
-
+    
     @IBAction func didPressNext(_ sender: UIButton) {
         currentIndex = (currentIndex + 1) % cities.count
         updateView()
     }
+    @IBAction func unwindToViewController(_ sender: UIStoryboardSegue) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navVC = segue.destination as? UINavigationController
+        let tableVC = navVC?.viewControllers.first as! EditViewController
+        tableVC.city = cities[currentIndex]
+        tableVC.delegate = self
+    }
+}
 
+extension ViewController: SaveCityDelegate {
+    func didPressSave(cityG: City) -> Bool {
+        cities[currentIndex].guide = cityG.guide
+        cities[currentIndex].favorite = cityG.favorite
+        updateView()
+        return true
+    }
 }
