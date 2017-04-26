@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dt0-IK-Mo1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--CityName-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CityGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7fp-Zy-n5k">
+                                <rect key="frame" x="20" y="267" width="374" height="359"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rg6-w3-GQu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="259"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rg6-w3-GQu" secondAttribute="height" multiplier="16:10" id="xrW-og-X9e"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1Y-LA-kE2">
+                                <rect key="frame" x="191" y="634" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didPressNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="43j-cc-rSb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yo3-UI-gp5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="259"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S1Y-LA-kE2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1yZ-9f-Ixb"/>
+                            <constraint firstItem="7fp-Zy-n5k" firstAttribute="top" secondItem="rg6-w3-GQu" secondAttribute="bottom" constant="8" id="FN9-VE-MvK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S1Y-LA-kE2" secondAttribute="bottom" constant="8" id="Fym-gx-saO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7fp-Zy-n5k" secondAttribute="bottom" constant="46" id="Ifb-DK-zBG"/>
+                            <constraint firstAttribute="trailing" secondItem="7fp-Zy-n5k" secondAttribute="trailing" constant="20" id="Jch-KE-6JQ"/>
+                            <constraint firstAttribute="trailing" secondItem="rg6-w3-GQu" secondAttribute="trailing" id="SAt-gX-7Jd"/>
+                            <constraint firstItem="7fp-Zy-n5k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Ztw-zG-cBq"/>
+                            <constraint firstItem="rg6-w3-GQu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aoQ-ER-ffd"/>
+                            <constraint firstItem="rg6-w3-GQu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s7Q-NU-ghP"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="CityName" id="bMR-77-knc"/>
+                    <connections>
+                        <outlet property="cityImageView" destination="rg6-w3-GQu" id="1pt-bw-gVD"/>
+                        <outlet property="cityTextView" destination="7fp-Zy-n5k" id="JRe-fV-ycg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1253" y="477"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UKk-76-B6u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenVerticallyCompact="YES" id="dt0-IK-Mo1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Uh-RZ-3zE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Nc-7u-3vt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nQw-Cd-ZAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="477"/>
+        </scene>
+    </scenes>
+</document>
